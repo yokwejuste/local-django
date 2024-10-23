@@ -1,0 +1,6 @@
+# Testing frameworks and tools
+pytest>=6.0.0
+pytest-django>=4.0.0
+
+# Include core dependencies for testing
+-r base.txt

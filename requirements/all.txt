@@ -1,0 +1,4 @@
+# Include all other requirements
+-r base.txt
+-r dev.txt
+-r test.txt

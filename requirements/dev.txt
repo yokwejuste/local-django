@@ -1,0 +1,7 @@
+# Development tools
+ruff==0.0.254
+mypy== 0.910
+twine==3.4.1
+
+# Include core dependencies for development
+-r base.txt

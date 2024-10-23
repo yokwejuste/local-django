@@ -1,0 +1,50 @@
+[build-system]
+requires = ["poetry-core>=1.5.0", "setuptools>=42", "wheel"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry]
+name = "local-django"
+version = "0.0.1"
+description = "A Django package to automate translation of .po files using AWS or Azure or Helsinki Translate."
+readme = "README.md"
+license = "MIT"
+authors = ["Steve Yonkeu <yokwejuste@gmail.com>"]
+maintainers = ["Steve Yonkeu <yokwejuste@gmail.com>"]
+keywords = ["django", "translation", "aws", "azure", "po-files"]
+repository = "https://github.com/yokwejuste/local-django"
+homepage = "https://github.com/yokwejuste/local-django"
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Framework :: Django",
+    "Framework :: Django :: 3.2",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3.7",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12"
+]
+
+[tool.poetry.scripts]
+django_local = "django_local:main"
+
+[tool.poetry.dependencies]
+python = ">=3.8"
+Django = "^3.2"
+polib = "^1.1.0"
+docutils = ">=0.15,<0.21"
+
+boto3 = "^1.20.0"
+requests = "^2.32.3"
+
+[tool.poetry.extras]
+aws = ["boto3"]
+azure = ["requests"]
+transformers = ["torch", "transformers", "sentencepiece"]
+
+[tool.poetry.dev-dependencies]
+ruff = "^0.0.254"
+mypy = "^0.910"
+twine = "^3.4.1"
