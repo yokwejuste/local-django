@@ -1,6 +1,6 @@
 # Local-Django AUTOMATIC Translation Manager
 
-A Django package that automates the translation of `.po` files using AWS Translate or Azure Translator. This package
+A Django package that automates the translation of `.po` files using Google, AWS Translate or Azure Translator. This package
 offers a single translation manager to manage different translation services seamlessly.
 
 ## Quick Start
@@ -18,6 +18,7 @@ pip install local-django
 ```bash
 pip install local-django[aws]
 pip install local-django[azure]
+pip install local-django[google]
 ```
 
 ### Configuration
